@@ -1,5 +1,3 @@
-// compoenents/movimentacao-new.component.ts
-
 import { Component, OnInit } from '@angular/core';
 import { CorrentistaService } from 'src/app/services/correntista.service';
 import { MovimentacaoService } from 'src/app/services/movimentacao.service';
@@ -40,12 +38,11 @@ export class MovimentacaoNewComponent implements OnInit {
 save(): void {
   console.log(this.correntista)
   const movimentacao = {
-    valor:this.valor,
-    descricao:this.descricao,
-    tipo:this.tipo,
-    contaId:this.correntista.id,
-    dataHora:this.dataHora
-
+    valor: this.valor,
+    descricao: this.descricao,
+    tipo: this.tipo,
+    contaId: this.correntista.id,
+    dataHora: this.dataHora
   };
   console.log(movimentacao);
   this.movimentacaoService.create(movimentacao)

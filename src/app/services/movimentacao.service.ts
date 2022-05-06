@@ -19,4 +19,8 @@ export class MovimentacaoService {
     return this.http.post(`${baseUrl}/movimentacao`,movimentacao);
   }
 
+  findContaById(contaId: any): Observable<any> {
+    return this.http.get(`${baseUrl}/movimentacao/${contaId}`);
+  }
+
 }
